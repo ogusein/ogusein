@@ -1,0 +1,76 @@
+Console.Write("Birinci ededi daxil et : ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("Ikinci ededi daxil et : ");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("Ucuncu ededi daxil et : ");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            var sum = x1 + x2 + x3;
+            var sum1 = x1 + x2;
+            var sum2 = x1 + x3;
+            var sum3 = x2 + x3;
+
+
+            // uc cem
+            if (x1 % 2 == 0 && x2 % 2 == 0 && x3 % 2 == 0)
+            {
+                Console.WriteLine("Ededler cutdur.");
+            }
+            //uc tek
+            else if (x1 % 2 != 0 && x2 % 2 != 0 && x3 % 2 != 0)
+            {
+                Console.WriteLine("Ededler tekdir.");
+                Console.WriteLine();
+                Console.WriteLine("Cemi : " + sum);
+            }
+            //brinci ikinci
+            else if (x1 % 2 != 0 && x2 % 2 != 0 && x3 % 2 == 0)
+            {
+                Console.WriteLine("birinci və ikinci  Eded tekdir.");
+                Console.WriteLine();
+
+                Console.WriteLine("Cemi : " + sum1);
+            }
+            //ikinci ucuncu
+            else if (x1 % 2 == 0 && x2 % 2 != 0 && x3 % 2 != 0)
+            {
+                Console.WriteLine("ucuncu və ikinci  Eded tekdir.");
+                Console.WriteLine();
+
+                Console.WriteLine("Cemi : " + sum3);
+
+            }
+            //birinci ucuncu
+            else if (x1 % 2 != 0 && x2 % 2 == 0 && x3 % 2 == 0)
+            {
+                Console.WriteLine("birinci və ikinci  Eded tekdir.");
+                Console.WriteLine();
+
+                Console.WriteLine("Cemi : " + sum2);
+            }
+            //birinci
+            else if (x1 % 2 != 0 && x2 % 2 == 0 && x3 % 2 == 0)
+            {
+                Console.WriteLine("birinci və ikinci  Eded tekdir.");
+                Console.WriteLine();
+
+                Console.WriteLine("Cem : " + x1);
+            }
+            //ikinci
+            else if (x1 % 2 == 0 && x2 % 2 != 0 && x3 % 2 == 0)
+            {
+                Console.WriteLine("ikinci  Eded tekdir.");
+                Console.WriteLine();
+
+                Console.WriteLine("Cem : " + x2);
+
+            }
+            //ucuncu
+            else if (x1 % 2 == 0 && x2 % 2 == 0 && x3 % 2 != 0)
+            {
+                Console.WriteLine("ucuncu  Eded tekdir.");
+                Console.WriteLine();
+
+                Console.WriteLine("Cem : " + x3);
